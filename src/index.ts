@@ -11,7 +11,7 @@ app.use(
     secret: "your-secret-key", // 세션 암호화에 사용되는 비밀 키
     resave: false, // 세션이 수정되지 않아도 항상 저장되도록 설정
     saveUninitialized: true, // 초기화되지 않은 세션을 저장할지 여부 설정
-    cookie: { secure: true, httpOnly: true }, // HTTPS를 사용할 경우 true로 설정
+    cookie: { secure: true, httpOnly: true, maxAge: 6000 }, // HTTPS를 사용할 경우 true로 설정
     store: new fileStore()
   })
 );
