@@ -18,7 +18,7 @@ app.use(
 
 // 홈 라우트
 app.get("/", (req: Request, res: Response) => {
-  // 세션에 방문자 카운트 저장 및 증가
+  // 세션에 카운트 저장 및 증가
   if (req.session.views) {
     req.session.views++;
   } else {
